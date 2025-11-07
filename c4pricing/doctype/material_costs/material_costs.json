@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-05 04:33:53.262972",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "item_name",
+  "qty",
+  "direct_cost",
+  "margin",
+  "cost",
+  "total_cost",
+  "last_purchase_price",
+  "last_price"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "QTY",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cost"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "direct_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Direct Cost"
+  },
+  {
+   "fieldname": "margin",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Margin"
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "item.last_purchase_rate",
+   "fieldname": "last_purchase_price",
+   "fieldtype": "Currency",
+   "in_standard_filter": 1,
+   "label": "Last Purchase Price"
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "item.last_rate_update",
+   "fieldname": "last_price",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Last Price Update"
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-11 22:39:41.068342",
+ "modified_by": "Administrator",
+ "module": "c4pricing",
+ "name": "Material costs",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
