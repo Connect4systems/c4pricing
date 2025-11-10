@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-13 00:10:29.333222",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "item_name",
+  "uom",
+  "qty",
+  "direct_cost",
+  "margin",
+  "cost",
+  "total_cost",
+  "last_purchase_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "QTY",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Cost"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "direct_cost",
+   "fieldtype": "Float",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Direct Cost"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "margin",
+   "fieldtype": "Percent",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Margin"
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "item.last_purchase_rate",
+   "fieldname": "last_purchase_rate",
+   "fieldtype": "Currency",
+   "label": "Last Purchase Rate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-01 13:26:44.868559",
+ "modified_by": "Administrator",
+ "module": "c4pricing",
+ "name": "Labor costs",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,333 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-04-05 05:38:21.968438",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "party_type",
+  "party_name",
+  "project_qty",
+  "unit",
+  "start_date",
+  "end_date",
+  "expected_time_period",
+  "project",
+  "column_break_puvaq",
+  "item",
+  "image",
+  "boq_template",
+  "total_cost",
+  "naming_series",
+  "references_section",
+  "costing_note",
+  "cost_type",
+  "column_break_lz9ie",
+  "line_id",
+  "amended_from",
+  "pricing_tab",
+  "material_costs",
+  "total_material_costs",
+  "base_margin",
+  "section_break_cgpj",
+  "labor_costs",
+  "total_labor_costs",
+  "s_margin",
+  "bill_of_quantity_tab",
+  "expenses_table",
+  "total_expenses",
+  "outsource_tab",
+  "section_break_kmiex",
+  "contractors_table",
+  "total_contractors"
+ ],
+ "fields": [
+  {
+   "default": "BOQ-.YYYY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "BOQ-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "label": "Unit",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Party Type",
+   "options": "DocType",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "party_name",
+   "fieldtype": "Dynamic Link",
+   "in_standard_filter": 1,
+   "label": "Party",
+   "options": "party_type",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "expected_time_period",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Expected Time Period"
+  },
+  {
+   "fieldname": "column_break_puvaq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Contracting Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "project_qty",
+   "fieldtype": "Float",
+   "label": "Project QTY"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "boq_template",
+   "fieldtype": "Link",
+   "label": "BOQ Template",
+   "options": "Template BOQ"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "End Date"
+  },
+  {
+   "fieldname": "material_costs",
+   "fieldtype": "Table",
+   "label": "Material costs",
+   "options": "Material costs"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_material_costs",
+   "fieldtype": "Currency",
+   "label": "Total Material costs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "labor_costs",
+   "fieldtype": "Table",
+   "label": "Accessories costs",
+   "options": "Labor costs"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_labor_costs",
+   "fieldtype": "Currency",
+   "label": "Total Labor costs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_kmiex",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "contractors_table",
+   "fieldtype": "Table",
+   "label": "Contractors table",
+   "options": "Contractors table"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_contractors",
+   "fieldtype": "Currency",
+   "label": "Total Contractors",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expenses_table",
+   "fieldtype": "Table",
+   "label": "Expenses Table",
+   "options": "Expenses Table"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_expenses",
+   "fieldtype": "Currency",
+   "label": "Total Expenses",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "costing_note",
+   "fieldtype": "Link",
+   "label": "Costing Note",
+   "options": "Costing Note",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_lz9ie",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "line_id",
+   "fieldtype": "Data",
+   "label": "Line Id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "BOQ",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "BOQ",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "pricing_tab",
+   "fieldtype": "Tab Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "section_break_cgpj",
+   "fieldtype": "Section Break",
+   "label": "Accessories"
+  },
+  {
+   "fetch_from": "costing_note.cost_type",
+   "fieldname": "cost_type",
+   "fieldtype": "Link",
+   "label": "Cost Type",
+   "options": "Cost Type"
+  },
+  {
+   "fieldname": "bill_of_quantity_tab",
+   "fieldtype": "Tab Break",
+   "label": "Bill Of Quantity"
+  },
+  {
+   "fieldname": "outsource_tab",
+   "fieldtype": "Tab Break",
+   "label": "Outsource"
+  },
+  {
+   "fetch_from": "item.image",
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "base_margin",
+   "fieldtype": "Float",
+   "label": "Margin",
+   "precision": "0"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "s_margin",
+   "fieldtype": "Float",
+   "label": "Smargin"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "make_attachments_public": 1,
+ "modified": "2025-09-11 21:15:27.844731",
+ "modified_by": "Administrator",
+ "module": "c4pricing",
+ "name": "BOQ",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Offer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "pricing",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

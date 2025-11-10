@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-13 00:10:26.042620",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "item_description",
+  "item_group",
+  "uom",
+  "qty",
+  "cost",
+  "total_cost",
+  "default_profit_margin",
+  "target_selling_price",
+  "total_selling",
+  "boq",
+  "boq_link"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "columns": 1,
+   "fieldname": "item_description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Description"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "QTY"
+  },
+  {
+   "columns": 1,
+   "fieldname": "boq",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "BOQ"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "boq_link",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "BOQ Link",
+   "options": "BOQ"
+  },
+  {
+   "columns": 1,
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Cost"
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "default_profit_margin",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Default Profit Margin"
+  },
+  {
+   "columns": 1,
+   "fieldname": "target_selling_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Target selling price"
+  },
+  {
+   "fieldname": "total_selling",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Selling"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-26 21:48:28.143876",
+ "modified_by": "Administrator",
+ "module": "c4pricing",
+ "name": "Costing Note Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
