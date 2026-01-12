@@ -57,6 +57,9 @@ def next_code(
       - WIP                  : WIP-(custom_main_product)-item_name           [unique if needed]
     """
     t = _norm(item_type)
+    
+    # Debug: Log the item type being processed
+    frappe.log_error(f"Item Type received: '{item_type}' | Normalized: '{t}'", "Item Naming Debug")
 
     # Standard Product → Brand + Group
     if t == "standard product":

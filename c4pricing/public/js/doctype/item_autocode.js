@@ -6,6 +6,11 @@
 
   async function apply_item_group_filter(frm) {
     const t = (get_item_type(frm) || "").trim().toLowerCase();
+    
+    // Debug logging
+    console.log("=== ITEM GROUP FILTER DEBUG ===");
+    console.log("Item Type:", get_item_type(frm));
+    console.log("Normalized:", t);
 
     // Default: clear custom query
     let query_opts = { filters: {} };
