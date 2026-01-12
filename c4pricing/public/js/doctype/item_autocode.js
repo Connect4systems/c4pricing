@@ -29,7 +29,7 @@
       // Only under "Accessorise"
       query_opts = { filters: { parent_item_group: ["=", "Accessorise"] } };
 
-    } else if (t === "services") {
+    } else if (t === "services" || t === "service") {
       // Force "Services" item group
       if (frm.doc.item_group !== "Services") {
         frm.set_value("item_group", "Services");
@@ -83,6 +83,10 @@
     }
     if (t === "asset item" || t === "asset") {
       if (!frm.doc.item_group) return;
+    }
+    // Services requires no additional fields
+    if (t === "services" || t === "service") {
+      // Services doesn't need item_group since it auto-sets
     }
 
     try {
