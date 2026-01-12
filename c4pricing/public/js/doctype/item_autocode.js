@@ -21,6 +21,10 @@
       // Only under "Products" (immediate children are fine here)
       query_opts = { filters: { parent_item_group: ["=", "Products"] } };
 
+    } else if (t === "asset item" || t === "asset") {
+      // Only under "Asset"
+      query_opts = { filters: { parent_item_group: ["=", "Asset"] } };
+
     } else if (t === "accessories") {
       // Only under "Accessorise"
       query_opts = { filters: { parent_item_group: ["=", "Accessorise"] } };
