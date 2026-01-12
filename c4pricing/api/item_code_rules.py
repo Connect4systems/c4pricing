@@ -48,8 +48,9 @@ def next_code(
     """
     Naming rules:
       - Standard Product     : {Brand.custom_abr}-{ItemGroup.custom_abr}-###
-      - Asset Item           : ASS-YY-{ItemGroup.custom_abr}-###
+      - Asset Item           : AS-{ItemGroup.custom_abr}-###
       - Accessories          : ACS-####
+      - Services             : SRV-###
       - Material Item        : MTR-{ItemGroup.custom_abr}-###
       - Customized Product   : {ItemType.abr}-{ItemGroup.custom_abr}-###
       - Part                 : PRT-(custom_main_product)-(custom_part_type)  [unique if needed]
@@ -67,17 +68,20 @@ def next_code(
             frappe.throw("Please set <b>custom_abr</b> on the selected <b>Item Group</b>.")
         return make_autoname(f"{b}-{g}-.###")
 
-    # Asset Item → ASS-YY-{Group}-###
+    # Asset Item → AS-{Group}-###
     if t in ("asset item", "asset"):
-        yy = now_datetime().strftime("%y")
         g = _group_abr(item_group)
         if not g:
             frappe.throw("Please set <b>custom_abr</b> on the selected <b>Item Group</b>.")
-        return make_autoname(f"ASS-{yy}-{g}-.###")
+        return make_autoname(f"AS-{g}-.###")
 
     # Accessories → ACS-####
     if t == "accessories":
         return make_autoname("ACS-.####")
+
+    # Services → SRV-###
+    if t == "services":
+        return make_autoname("SRV-.###")
 
     # Part → PRT-(main_product)-(part_type) with uniqueness
     if t == "part":

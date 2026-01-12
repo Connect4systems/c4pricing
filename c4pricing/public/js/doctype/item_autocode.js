@@ -25,6 +25,13 @@
       // Only under "Accessorise"
       query_opts = { filters: { parent_item_group: ["=", "Accessorise"] } };
 
+    } else if (t === "services") {
+      // Force "Services" item group
+      if (frm.doc.item_group !== "Services") {
+        frm.set_value("item_group", "Services");
+      }
+      query_opts = { filters: { name: ["=", "Services"] } };
+
     } else if (t === "material item") {
       // All descendants of "Materials": use lft/rgt bounds from server
       try {
